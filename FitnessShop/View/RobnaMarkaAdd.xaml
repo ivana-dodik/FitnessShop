@@ -1,0 +1,78 @@
+﻿<Window x:Class="FitnessShop.View.RobnaMarkaAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessShop.View"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Dodaj robnu marku" Height="450" Width="700">
+    <Border CornerRadius="12">
+        <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#1B1448" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="Naziv:" Foreground="LightGray" FontSize="18"  FontWeight="Medium" FontFamily="Montserrat" Margin="157,78,10,302"  />
+                <TextBlock Grid.Column="0" Text="Opis:" Foreground="LightGray" FontSize="18"  FontWeight="Medium" FontFamily="Montserrat" Margin="167,129,0,251"  />
+                
+                <TextBox Grid.Column="1" x:Name="robnaMarkaNazivTxtBox" Height="35" Margin="28,78,180,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="251"
+                          HorizontalContentAlignment="Left" Background="LightGray" Foreground="Black" FontSize="16"  FontWeight="Medium" 
+                         FontFamily="Montserrat" VerticalContentAlignment="Center"/>
+                <TextBox Grid.Column="1" x:Name="robnaMarkaOpisTxtBox" Height="35" Margin="28,129,180,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="251"
+                          HorizontalContentAlignment="Left" Background="LightGray" Foreground="Black" FontSize="16"  FontWeight="Medium" 
+                         FontFamily="Montserrat" VerticalContentAlignment="Center"/>
+                
+
+                <Button x:Name="btnDodaj"   Grid.Column="1"                       
+                            BorderThickness="0"
+                            Content="Dodaj"
+                            Foreground="White"
+                            FontSize="14"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"    
+                    Click="btnDodaj_Click" Margin="212,193,73,158">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="#462AD8"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#28AEED"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Template>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Width="150" Height="40"
+                                        CornerRadius="20"
+                                        Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+            </Grid>
+
+        </Border>
+    </Border>
+</Window>

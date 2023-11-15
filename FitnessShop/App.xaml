@@ -1,0 +1,9 @@
+﻿<Application x:Class="FitnessShop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FitnessShop"
+              StartupUri="View/Primary.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
